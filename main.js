@@ -15,6 +15,7 @@ let audio1 = new Audio('audio1.mp3');
 let audio2 = new Audio('audio2.mp3');
 
 let track = 1;
+let clr = 130;
 
 function adder(){
     for(let i=0;i<=1000;i++){
@@ -86,11 +87,11 @@ async function moveAround(){
             }
 
             numnums[i].style.transform=`rotate(${Math.floor(Math.random()*361)}deg)`;
-            numnums[i].style.background=`rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
+            numnums[i].style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
         };
 
         
-        mid.style.background=`rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
+        mid.style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
 
         
         
