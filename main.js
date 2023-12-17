@@ -11,6 +11,11 @@ let subtract = document.querySelector('.subtract');
 let add = document.querySelector('.add');
 
 
+let audio1 = new Audio('audio1.mp3');
+let audio2 = new Audio('audio2.mp3');
+
+let track = 1;
+
 function adder(){
     for(let i=0;i<=1000;i++){
         let addnumbers=`<button style='width:${Math.floor(Math.random()*23)+18}px;height:${Math.floor(Math.random()*23)+15}px;position:relative;' class='numnum' data-status="active" data-motion="1">${i}</button>`;
@@ -61,6 +66,14 @@ async function moveAround(){
     let numnums = document.querySelectorAll('.numnum');
 
     while(true){
+        if(track==1){
+            audio1.play();
+            track*=-1;
+        }else{
+            audio2.play();
+            track*=-1; 
+        }
+
         for(let i=0;i<=1000;i++){
             if(numnums[i].getAttribute('data-motion') == "1"){
                 numnums[i].style.left=`${Math.floor(Math.random()*21)}px`;
@@ -74,9 +87,13 @@ async function moveAround(){
 
             numnums[i].style.transform=`rotate(${Math.floor(Math.random()*361)}deg)`;
             numnums[i].style.background=`rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
-            mid.style.background=`rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
         };
 
+        
+        mid.style.background=`rgb(${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)},${Math.floor(Math.random()*256)})`;
+
+        
+        
         await sleep(400);
     };
 };
