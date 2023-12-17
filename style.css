@@ -34,7 +34,7 @@ body{}
         
         .mid{
             width:100%;
-            background:green;
+            background:yellow;
         }
 
             .mid>button{
@@ -44,7 +44,7 @@ body{}
                 height:100px;
                 text-decoration:underline;
                 font-weight:bold;
-                background:yellow;
+                background:green;
             }
 
         .bottom{
