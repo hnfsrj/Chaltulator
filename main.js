@@ -83,12 +83,14 @@ async function moveAround(){
             if(numnums[i].getAttribute('data-motion') == "1"){
                 numnums[i].style.left=`${Math.floor(Math.random()*21)}px`;
                 numnums[i].style.top=`${Math.floor(Math.random()*21)}px`;
-                numnums[i].style.width=`${Math.floor(Math.random()*23)+18}px`;
-                numnums[i].style.height=`${Math.floor(Math.random()*23)+15}px`;
+                numnums[i].style.width=`${Math.floor(Math.random()*50)+18}px`;
+                numnums[i].style.height=`${Math.floor(Math.random()*50)+15}px`;
                 numnums[i].dataset.motion = "0";
             }else{
                 numnums[i].style.right=`${Math.floor(Math.random()*21)}px`;
                 numnums[i].style.bottom=`${Math.floor(Math.random()*21)}px`;
+                numnums[i].style.width=`${Math.floor(Math.random()*50)+18}px`;
+                numnums[i].style.height=`${Math.floor(Math.random()*50)+15}px`;
                 numnums[i].dataset.motion = "1";
             }
 
