@@ -19,7 +19,7 @@ let audio1 = new Audio('audio1.mp3');
 let audio2 = new Audio('audio2.mp3');
 
 let track = 1;
-let clr = 130;
+let clr = 100;
 
 function adder(){
     for(let i=0;i<=1000;i++){
@@ -71,13 +71,13 @@ async function moveAround(){
     let numnums = document.querySelectorAll('.numnum');
 
     while(true){
-        // if(track==1){
-        //     audio1.play();
-        //     track*=-1;
-        // }else{
-        //     audio2.play();
-        //     track*=-1; 
-        // }
+        if(track==1){
+            audio1.play();
+            track*=-1;
+        }else{
+            audio2.play();
+            track*=-1; 
+        }
 
         for(let i=0;i<=1000;i++){
             if(numnums[i].getAttribute('data-motion') == "1"){
@@ -98,9 +98,9 @@ async function moveAround(){
 
         
         mid.style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
-        // container.style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
-        // h.style.background=`gradient(rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}),rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}),90)`;
-        // p.style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
+        container.style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
+        h.style.background=`radial-gradient(rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}),rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}),rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}))`;
+        p.style.background=`linear-gradient(45deg,rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}),rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}),rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}))`;
 
         
         
