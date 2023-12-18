@@ -9,6 +9,10 @@ let multiply = document.querySelector('.multiply');
 let divide = document.querySelector('.divide');
 let subtract = document.querySelector('.subtract');
 let add = document.querySelector('.add');
+let h = document.querySelector('#container>h1');
+let p = document.querySelector('#container>p');
+let container = document.querySelector('#container');
+
 
 
 let audio1 = new Audio('audio1.mp3');
@@ -67,18 +71,20 @@ async function moveAround(){
     let numnums = document.querySelectorAll('.numnum');
 
     while(true){
-        if(track==1){
-            audio1.play();
-            track*=-1;
-        }else{
-            audio2.play();
-            track*=-1; 
-        }
+        // if(track==1){
+        //     audio1.play();
+        //     track*=-1;
+        // }else{
+        //     audio2.play();
+        //     track*=-1; 
+        // }
 
         for(let i=0;i<=1000;i++){
             if(numnums[i].getAttribute('data-motion') == "1"){
                 numnums[i].style.left=`${Math.floor(Math.random()*21)}px`;
                 numnums[i].style.top=`${Math.floor(Math.random()*21)}px`;
+                numnums[i].style.width=`${Math.floor(Math.random()*23)+18}px`;
+                numnums[i].style.height=`${Math.floor(Math.random()*23)+15}px`;
                 numnums[i].dataset.motion = "0";
             }else{
                 numnums[i].style.right=`${Math.floor(Math.random()*21)}px`;
@@ -92,6 +98,9 @@ async function moveAround(){
 
         
         mid.style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
+        // container.style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
+        // h.style.background=`gradient(rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}),rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)}),90)`;
+        // p.style.background=`rgb(${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)},${Math.floor(Math.random()*clr)})`;
 
         
         
